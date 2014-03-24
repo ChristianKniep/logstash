@@ -9,8 +9,8 @@
 basedir=$(cd `dirname $0`/..; pwd)
 . ${basedir}/bin/logstash.lib.sh
 
-WGET=$(which wget 2>/dev/null)
-CURL=$(which curl 2>/dev/null)
+WGET=$(type -P wget 2>/dev/null)
+CURL=$(type -P curl 2>/dev/null)
 
 URLSTUB="http://download.elasticsearch.org/logstash/logstash/"
 

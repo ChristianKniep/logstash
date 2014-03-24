@@ -27,7 +27,7 @@ setup_java() {
   fi
 
   if [ ! -x "$JAVACMD" ] ; then
-    JAVACMD="$(which $JAVACMD 2> /dev/null)"
+    JAVACMD="$(type -P $JAVACMD 2> /dev/null)"
     if [ ! -x "$JAVACMD" ] ; then
       echo "Could not find any executable java binary (tried '$JAVACMD'). Please install java in your PATH or set JAVA_HOME."
       exit 1
